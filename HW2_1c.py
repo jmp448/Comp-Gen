@@ -70,18 +70,18 @@ def min10(n, probs):
     # Create list of indices
     # Also keep track of minimum
 
-    minima = list([0])
+    minima = list()
+    minima.append(0)
     the_cut = 1
-    for i in range(1,len(probs)):
-        if probs[i] < the_cut:
+    for i in range(1, len(probs)):
+        if probs[i] <= the_cut:
             j = 0
-            while probs[i] > probs[minima[j]]:
+            while j < len(minima) and probs[i] > probs[minima[j]]:
                 j += 1
             minima.insert(j, i)
             if len(minima) > 10:
-                minima.pop(10)
+                minima.pop()
                 the_cut = probs[9]
-    minima.reverse()
     return minima
 
 
@@ -97,23 +97,19 @@ Returns:
 
 
 def max10(n, probs):
-    """YOUR CODE FOR FINDING AND RETURNING THE INDICES, FROM probs, OF THE
-            10 HIGHEST PROBABILITY VALUES HERE"""
 
-    maxima = list([0])
+    maxima = list()
+    maxima.append(0)
     the_cut = 0
     for i in range(1,len(probs)):
         if probs[i] > the_cut:
             j = 0
-            print("The value of i is %s" % i)
-
-            while probs[i] < probs[maxima[j]]:
+            while j < len(maxima) and probs[i] < probs[maxima[j]]:
                 j += 1
             maxima.insert(j, i)
             if len(maxima) > 10:
                 maxima.pop(10)
                 the_cut = probs[9]
-    maxima.reverse()
     return maxima
 
 """ Computes the mean and variance of an array of probabilities for [n, 6n].
@@ -130,9 +126,15 @@ def compute_stats(n, probs):
     # initialize:
     expect = 0.0
     variance = 0.0
-    pass 
-    """YOUR CODE FOR COMPUTING THE EXPECTATION AND VARIANCE FROM probs
-            HERE"""
+
+    for i in range(len(probs)):
+        expect += probs[i]
+    expect = expect/len(probs)
+
+    for i in range(len(probs)):
+        variance += (probs[i] - expect) ** 2
+    variance = variance/len(probs)
+
     return expect, variance
 
 
@@ -154,22 +156,23 @@ def main():
     h = h_Y(n, pi)
     err = 1.0 - sum(h)
     assert(err * err <= 10 ** -10)
+    print h
     min10_values = min10(n, h)
     max10_values = max10(n, h)
 
-    print("Min probabilities:")
+    print "Min probabilities:"
     for y in min10_values:
-        print (str(y) + " %.4g" % h[y - n])
-    print("\nMax probabilities:")
+        print (str(y) + " %.4g" % h[y])
+    print "\nMax probabilities:"
     for y in max10_values:
-        print (str(y) + " %.4g" % h[y - n])
-    # with open("h_%d_dp.csv" % n, "wb") as fil:
-    #     for i in range(n, n + len(h)):
-    #         s = str(i) + ",%.4e\n" % h[i-n]
-    #         fil.write(s)
-    # mean, var = compute_stats(n, h)
-    # print "\nMean is %.4g" % mean
-    # print "Variance is %.4g" % var
+        print (str(y) + " %.4g" % h[y])
+    with open("h_%d_dp.csv" % n, "wb") as fil:
+        for i in range(n, n + len(h)):
+            s = str(i) + ",%.4e\n" % h[i-n]
+            fil.write(s)
+    mean, var = compute_stats(n, h)
+    print "\nMean is %.4g" % mean
+    print "Variance is %.4g" % var
 
 
 if __name__ == "__main__":
