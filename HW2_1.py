@@ -2,8 +2,6 @@
 # jmp448
 # CS 4775: Computational Genetics
 
-# !/usr/bin/env python
-
 """
 Script for computing h_{Y_n} given n and the probabilities of observing 1-6.
 Arguments:
@@ -21,6 +19,7 @@ Example Usage:
 
 import argparse
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 """
@@ -128,11 +127,10 @@ def compute_stats(n, probs):
     variance = 0.0
 
     for i in range(len(probs)):
-        expect += probs[i]
-    expect = expect/len(probs)
+        expect += (i+n)*probs[i]
 
     for i in range(len(probs)):
-        variance += (probs[i] - expect) ** 2
+        variance += (i + n - expect) ** 2
     variance = variance/len(probs)
 
     return expect, variance
@@ -156,16 +154,15 @@ def main():
     h = h_Y(n, pi)
     err = 1.0 - sum(h)
     assert(err * err <= 10 ** -10)
-    print h
     min10_values = min10(n, h)
     max10_values = max10(n, h)
 
     print "Min probabilities:"
     for y in min10_values:
-        print (str(y) + " %.4g" % h[y])
+        print (str(y+n) + " %.4g" % h[y])
     print "\nMax probabilities:"
     for y in max10_values:
-        print (str(y) + " %.4g" % h[y])
+        print (str(y+n) + " %.4g" % h[y])
     with open("h_%d_dp.csv" % n, "wb") as fil:
         for i in range(n, n + len(h)):
             s = str(i) + ",%.4e\n" % h[i-n]
@@ -173,6 +170,19 @@ def main():
     mean, var = compute_stats(n, h)
     print "\nMean is %.4g" % mean
     print "Variance is %.4g" % var
+
+    # Plot distributions
+    # h
+    y = np.zeros(5*n+1)
+    for i in range(len(y)):
+        y[i] += i+n
+
+    # Geometric
+    phi = 32.0/95.0
+    for i in range(len(y)):
+
+    plt.plot(y, h)
+    plt.show()
 
 
 if __name__ == "__main__":
