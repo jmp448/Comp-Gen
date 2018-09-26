@@ -70,8 +70,6 @@ The latter two are computed using the above traceback method.
 
 
 def sequence_alignment(x, y, s, d):
-    print x
-    print y
     m = np.zeros([len(x)+1, len(y)+1])
     ''' Recurrence matrix '''
 

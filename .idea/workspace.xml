@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97aef4fa-3034-479a-baa2-23507508f86d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HW2_2b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/score_matrix_2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2.fasta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW2_2c.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW2_1c.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW2_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW2_2b" beforeDir="false" afterPath="$PROJECT_DIR$/HW2_2b.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,33 +24,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="HW2_2b" value="1" />
+          <entry key="HW2_2b" value="3" />
           <entry key="csv" value="2" />
-          <entry key="fasta" value="3" />
-          <entry key="json" value="2" />
-          <entry key="py" value="2" />
+          <entry key="fasta" value="4" />
+          <entry key="json" value="3" />
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="3" />
+          <entry key="JSON" value="3" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="HW2_2b" value="1738" />
+          <entry key="HW2_2b" value="1740" />
+          <entry key="dummy" value="3" />
           <entry key="fasta" value="12" />
           <entry key="json" value="11" />
-          <entry key="py" value="2165" />
+          <entry key="py" value="4482" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="11" />
-          <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="3903" />
+          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="Python" value="6222" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -61,34 +60,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HW2_2b">
+        <entry file="file://$PROJECT_DIR$/HW2_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+            <state relative-caret-position="2064">
+              <caret line="181" column="27" lean-forward="true" selection-start-line="181" selection-start-column="27" selection-end-line="181" selection-end-column="27" />
               <folding>
-                <element signature="e#380#395#0" expanded="true" />
-                <marker date="1537850823366" expanded="true" signature="462:464" ph="..." />
-                <marker date="1537850823366" expanded="true" signature="823:1261" ph="..." />
-                <marker date="1537850823366" expanded="true" signature="3054:3059" ph="..." />
+                <element signature="e#546#561#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test1.fasta">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/score_matrix_2.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="166" lean-forward="true" selection-start-column="166" selection-end-column="166" />
             </state>
           </provider>
         </entry>
@@ -99,20 +77,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sequences.fasta">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="3" selection-end-column="107" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/score_matrix.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -126,6 +102,7 @@
         <option value="$PROJECT_DIR$/test1.fasta" />
         <option value="$PROJECT_DIR$/score_matrix_2.json" />
         <option value="$PROJECT_DIR$/HW2_2b" />
+        <option value="$PROJECT_DIR$/HW2_2c.py" />
       </list>
     </option>
   </component>
@@ -175,7 +152,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.HW2_2b">
+  <component name="RunManager" selected="Python.HW2_2c">
     <configuration name="HW2_1c" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Comp-Gen" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -209,8 +186,29 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW2_2b" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW2_2b.py" />
       <option name="PARAMETERS" value="-f sequences.fasta -s score_matrix.json -d 100" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="HW2_2c" type="PythonConfigurationType" factoryName="Python">
+      <module name="Comp-Gen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv2.7/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW2_2c.py" />
+      <option name="PARAMETERS" value="-f sequences.fasta -s score_matrix.json -d 430 -e 30" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -220,6 +218,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.HW2_2b" />
+      <item itemvalue="Python.HW2_2c" />
       <item itemvalue="Python.HW2_1c" />
     </list>
     <recent_temporary>
@@ -245,12 +244,12 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24071082" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24071082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29041097" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29041097" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -283,26 +282,13 @@
     <entry file="file://$PROJECT_DIR$/h_50_dp.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW2_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="183" column="4" selection-start-line="183" selection-start-column="4" selection-end-line="183" selection-end-column="4" />
-          <folding>
-            <element signature="e#546#561#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hw3.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/score_matrix.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sequences.fasta">
+    <entry file="file://$PROJECT_DIR$/test1.fasta">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="3" selection-end-column="107" />
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -313,25 +299,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test2.fasta">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test1.fasta">
+    <entry file="file://$PROJECT_DIR$/sequences.fasta">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+          <caret selection-end-line="3" selection-end-column="107" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HW2_2b">
+    <entry file="file://$PROJECT_DIR$/score_matrix.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.fasta">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2_2b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="630">
+          <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
           <folding>
-            <element signature="e#380#395#0" expanded="true" />
-            <marker date="1537850823366" expanded="true" signature="462:464" ph="..." />
-            <marker date="1537850823366" expanded="true" signature="823:1261" ph="..." />
-            <marker date="1537850823366" expanded="true" signature="3054:3059" ph="..." />
+            <marker date="1537890869373" expanded="true" signature="462:464" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2_2c.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-500">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#447#462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW2_1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2064">
+          <caret line="181" column="27" lean-forward="true" selection-start-line="181" selection-start-column="27" selection-end-line="181" selection-end-column="27" />
+          <folding>
+            <element signature="e#546#561#0" expanded="true" />
           </folding>
         </state>
       </provider>
