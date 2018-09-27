@@ -20,6 +20,8 @@ Example Usage:
 import argparse
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.mlab as mlab
+import math
 
 
 """
@@ -123,18 +125,34 @@ Returns:
 
 def compute_stats(n, probs):
     # initialize:
-    expect = 0.0
+    mean = 0.0
     variance = 0.0
 
     for i in range(len(probs)):
-        expect += (i+n)*probs[i]
+        mean += (i+n)*probs[i]
 
     for i in range(len(probs)):
-        variance += (i + n - expect) ** 2
-    variance = variance/len(probs)
+        dif = i + n - mean
+        variance += probs[i] * (dif ** 2)
 
-    return expect, variance
+    return mean, variance
 
+
+def factorial(n):
+    prod = 1
+    while n > 1:
+        prod *= n
+        n -= 1
+    return prod
+
+def comb(n,k):
+    prod = 1
+    stop = n-k
+    while n > stop:
+        prod *= n
+        n -= 1
+    prod /= factorial(k)
+    return prod
 
 def main():
     parser = argparse.ArgumentParser(
@@ -168,20 +186,38 @@ def main():
             s = str(i) + ",%.4e\n" % h[i-n]
             fil.write(s)
     mean, var = compute_stats(n, h)
-    print "\nMean is %.4g" % mean
+    print "\nMean is %.9g" % mean
     print "Variance is %.4g" % var
 
     # Plot distributions
-    # h
-    y = np.zeros(5*n+1)
+    # y = np.zeros(5*n+1)
+    y = np.zeros([100])
     for i in range(len(y)):
         y[i] += i+n
 
-    # Geometric
-    phi = 32.0/95.0
+    # Negative binomial approximation g
+    phi = (mean/n) ** -1
+    g = np.zeros(len(y))
     for i in range(len(y)):
+        t1 = comb(y[i]-1, 49)
+        t2 = (1-phi)**(y[i]-50)
+        t3 = phi**50
+        g[i] = t1*t2*t3
 
-    plt.plot(y, h)
+    # Normal distribution
+    nvar = 0
+    for i in range(len(pi)):
+        nvar += pi[i] * ((i+1-mean/n)**2)
+    nvar *= n
+    print(nvar)
+    n = mlab.normpdf(y, mean, math.sqrt(nvar))
+
+    plt.title('Probability Distribution Approximations')
+    # plt.plot(y, h, color='red', label='Our DP Distribution')
+    plt.plot(y, h[:100], color='red', label='Our DP Distribution')
+    plt.plot(y, g, color='blue', label='Negative Binomial')
+    plt.plot(y, n, color='green', label='Normal')
+    plt.legend()
     plt.show()
 
 
